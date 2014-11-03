@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="font_button">
+        <attr name="topTextFont" format="integer" localization="suggested">
+            <enum name="pulsarjs" value="1"></enum>
+            <enum name="WebSymbols_Regular" value="2"></enum>
+        </attr>
+        <attr name="topTextColor" format="color" />
+        <attr name="topText" format="string"></attr>
+        <attr name="topTextSize" format="float"></attr>
+        <attr name="text" format="string"></attr>
+        <attr name="textSize" format="float"></attr>
+        <attr name="textFont" format="integer" localization="suggested">
+            <enum name="pulsarjs" value="1"></enum>
+            <enum name="WebSymbols_Regular" value="2"></enum>
+        </attr>
+        <attr name="isbottomText" format="color" />
+        <attr name="textColor" format="color" />
+    </declare-styleable>
+
+</resources>
