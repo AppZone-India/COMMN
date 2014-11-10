@@ -5,12 +5,14 @@
     android:pivotX="50.0%"
     android:pivotY="50.0%"
     android:repeatCount="infinite"
+    android:drawable="@drawable/processing"
     android:toDegrees="360.0" >
 
-    <shape
+   <!--  <shape
         android:innerRadiusRatio="3.0"
         android:shape="ring"
         android:thicknessRatio="16.0"
+        
         android:useLevel="false" >
         <size
             android:height="50.0dip"
@@ -21,6 +23,6 @@
             android:startColor="#FF3300"
             android:type="sweep"
             android:useLevel="false" />
-    </shape>
+    </shape> -->
 
 </rotate>
