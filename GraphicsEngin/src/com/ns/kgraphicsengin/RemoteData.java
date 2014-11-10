@@ -24,6 +24,8 @@ import org.xml.sax.SAXException;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
+import android.view.LayoutInflater;
+import android.view.View;
 
 /**
  * This Provides Common Asynch Tast.
@@ -60,13 +62,16 @@ public class RemoteData
 	 *            Your Activity Context
 	 * @author khalid khan
 	 */
-	public void setProgressDialog(Context context)
+	public void setProgressDialog(Context context,int theme)
 	{
 		isProgressDialogOn = true;
-		pdial = new ProgressDialog(context);
-		pdial.setCancelable(false);
-		pdial.setCanceledOnTouchOutside(false);
-		pdial.setMessage(context.getText(R.string.connecting));
+		pdial = ProgressDialog.show(context, null, "Please wait");
+		LayoutInflater inflater = LayoutInflater.from(context);
+		View v = inflater.inflate(R.layout.progress_layout, null);
+		((CharTextView) v.findViewById(R.id.loading_text)).setText("Please wait");
+		pdial.setContentView(v);
+
+		pdial.setIndeterminate(true);
 	}
 
 	/**
